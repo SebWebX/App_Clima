@@ -1,0 +1,152 @@
+:root {
+  --bg-color: #f0f4f8;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --primary-color: #1e88e5;
+  --input-bg: #fff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.tema-oscuro {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --primary-color: #90caf9;
+  --input-bg: #2c2c2c;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.app-title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.input-section {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.input-ciudad {
+  padding: 0.8rem;
+  width: 65%;
+  max-width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-ciudad:focus {
+  border-color: var(--primary-color);
+}
+
+.btn-buscar,
+.btn-tema {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-buscar:hover,
+.btn-tema:hover {
+  background-color: #1565c0;
+}
+
+.resultado-section img {
+  margin-top: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+/* Spinner Material Design */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgba(30, 136, 229, 0.2);
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
+  margin: 1rem auto;
+  display: none;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn-tema {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8ox var(--shadow);
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+.btn-tema:hover {
+  background-color: #1565c0;
+}
+
+.forecast-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card-dia {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  width: 120px;
+  text-align: center;
+  box-shadow: 0 2px 5px var(--shadow);
+  color: var(--text-color);
+}
+
+  

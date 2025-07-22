@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clima App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-container">
+    <h1 class="app-title">🌤️ Consulta el Clima</h1>
+
+    <section class="input-section">
+      <input type="text" id="ciudad" placeholder="Ej: Veracruz" class="input-ciudad" />
+      <button id="buscar" class="btn-buscar">Buscar</button>
+    </section>
+
+    <div id="loader" class="spinner" style="display: none;"></div>
+
+    <section id="resultado" class="resultado-section"></section>
+  </main>
+  <button id="toggle-tema" class="btn-tema">🌓 Tema</button>
+  <script src="script.js"></script>
+</body>
+</html>
